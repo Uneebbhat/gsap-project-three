@@ -77,3 +77,17 @@ gsap.to(".main__img", {
   delay: 3.5,
   ease: "linear",
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".li", {
+  scrollTrigger: {
+    trigger: ".services__list", // Change this to the appropriate trigger element
+    start: "top center", // Adjust this based on when you want the animation to start
+    end: "bottom center", // Adjust this based on when you want the animation to end
+    toggleActions: "play none none none", // Adjust the toggle actions as needed
+  },
+  xPercent: 100,
+  opacity: 1,
+  stagger: 0.9,
+});

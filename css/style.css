@@ -138,7 +138,7 @@ a {
   opacity: 0;
 }
 .main .main__wrapper .main__img .img {
-  background: url("/assets/hero.jpg");
+  background: url("../assets/hero.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -211,16 +211,12 @@ a {
   text-align: left;
   font-weight: bold;
   font-size: clamp(1.5rem, 5vw, 4rem);
-  scroll-behavior: smooth;
-}
-.services__section .services__wrapper .services__list img {
-  max-width: 100%;
-  width: 50px;
-  display: none;
 }
 .services__section .services__wrapper .services__list ul li {
   text-align: left;
   transition: all 0.2s ease;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 .services__section .services__wrapper .services__list ul li:hover {
   color: #252525;
