@@ -63,6 +63,7 @@ a {
   padding: 0 50px;
   align-items: center;
   justify-content: space-between;
+  transform: translateY(-100%);
   z-index: 999;
   transition: all 0.3s;
 }
@@ -109,6 +110,8 @@ a {
   line-height: normal;
   text-transform: uppercase;
   text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .main .main__wrapper h1 .main__first-text {
   font-size: clamp(2rem, 10vw, 4rem);
@@ -121,6 +124,10 @@ a {
   font-size: clamp(2rem, 10vw, 4rem);
   font-family: "Mona-Sans ExtraBold Wide";
 }
+.main .main__wrapper h1 .char {
+  transform: translateY(200px);
+  transition: transform 0.5s;
+}
 .main .main__wrapper .main__img {
   height: 100vh;
   position: relative;
@@ -128,6 +135,7 @@ a {
   width: 20%;
   margin: 0 auto;
   margin-top: 80px;
+  opacity: 0;
 }
 .main .main__wrapper .main__img .img {
   background: url("/assets/hero.jpg");

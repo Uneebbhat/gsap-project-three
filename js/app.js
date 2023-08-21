@@ -1,9 +1,3 @@
-// function toggleHideMenu() {
-//   const menu = document.querySelector(".navbar");
-//   menu.classList.toggle("active");
-//   console.log("hello");
-// }
-
 const btn = document.querySelector(".menu");
 const navbar = document.querySelector(".navbar");
 const navItems = document.querySelector(".nav-items");
@@ -63,3 +57,23 @@ timeline.to(".main__img", {
 
 // Play the timeline
 timeline.play();
+
+const firstText = new SplitType(".main__first-text");
+const secondText = new SplitType(".main__second-text");
+
+gsap.to(".char", {
+  y: 0,
+  stagger: 0.05,
+  delay: 1,
+});
+
+gsap.to(".header", {
+  y: 0,
+  ease: "linear",
+});
+
+gsap.to(".main__img", {
+  opacity: 1,
+  delay: 3.5,
+  ease: "linear",
+});

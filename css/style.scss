@@ -72,6 +72,7 @@ a {
   padding: 0 50px;
   align-items: center;
   justify-content: space-between;
+  transform: translateY(-100%);
   z-index: 999;
   transition: all 0.3s;
 
@@ -136,6 +137,7 @@ a {
       line-height: normal;
       text-transform: uppercase;
       text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       .main__first-text {
         font-size: clamp(2rem, 10vw, 4rem);
         font-family: "Mona-Sans Light";
@@ -148,6 +150,10 @@ a {
         font-family: "Mona-Sans ExtraBold Wide";
         // font-weight: 700;
       }
+      .char {
+        transform: translateY(200px);
+        transition: transform 0.5s;
+      }
     }
 
     .main__img {
@@ -157,6 +163,7 @@ a {
       width: 20%;
       margin: 0 auto;
       margin-top: 80px;
+      opacity: 0;
       .img {
         background: url("/assets/hero.jpg");
         background-size: cover;
